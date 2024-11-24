@@ -1,11 +1,11 @@
 import java.util.Objects;
 
 public class Employee {
-    private String fullName;
-    private int department;
-    private int salary;
     private int id = 0;
     private static int idGenerator = 1;
+    private final String fullName;
+    private int department;
+    private  int salary;
 
     public Employee(String fullName, int department, int salary) {
         this.fullName = fullName;
@@ -32,11 +32,11 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Cотрудник"+
-                " - Полное имя = " + fullName  +
+        return "Cотрудник" +
+                " - Полное имя = " + fullName +
                 ", Департамент = " + department +
                 ", Зарплата = " + salary +
-                ", id = " + id ;
+                ", id = " + id;
     }
 
     public void setDepartment(int department) {
